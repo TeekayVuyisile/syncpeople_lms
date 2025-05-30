@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Quiz - LMS</title>
+  <!-- Bootstrap CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .correct-answer {
+      background-color: #d1e7dd;
+      border-left: 5px solid #198754;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="text-center mb-4">
+      <h2>Quiz Overview</h2>
+    </div>
+
+    <!-- Quiz Details -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title">Quiz Title: <strong>Introduction to HTML</strong></h4>
+        <p class="card-text">This quiz tests the students' basic understanding of HTML tags, structure, and purpose.</p>
+        <p><strong>Number of Questions:</strong> 2</p>
+      </div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Question 1</h5>
+        <p class="card-text">What does HTML stand for?</p>
+        <ul class="list-group">
+          <li class="list-group-item correct-answer">HyperText Markup Language</li>
+          <li class="list-group-item">HyperTool Multi Language</li>
+          <li class="list-group-item">HyperText Machine Learning</li>
+          <li class="list-group-item">Home Tool Markup Language</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Question 2</h5>
+        <p class="card-text">Which HTML tag is used to insert an image?</p>
+        <ul class="list-group">
+          <li class="list-group-item">`&lt;pic&gt;`</li>
+          <li class="list-group-item">`&lt;image&gt;`</li>
+          <li class="list-group-item correct-answer">`&lt;img&gt;`</li>
+          <li class="list-group-item">`&lt;src&gt;`</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-grid mb-5">
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='teacher_edit_inprogress_quiz.html'">Edit Quiz</button>
+        <br>
+      <button class="btn btn-secondary" onclick="window.location.href='teacher_quiz.html'">Back to Quiz List</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

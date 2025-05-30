@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>LMS Dashboard</title>
+  <link rel="stylesheet" href="./assets/include/css/style.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <h1>LMS Portal</h1>
+      <button class="burger" id="burger">&#9776;</button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav">
+       <li><a href="teacher-dashboard.html">Dashboard</a></li>
+        <li><a href="teacher_module_materials.html">Module Materials</a></li>
+        <li><a href="teacher_students.html">Students</a></li>
+        <li><a href="teacher_quiz.html">Quizes</a></li>
+        <li class="active"><a href="teacher_calendar.html">Calendar</a></li>
+        <li><a href="teacher_messages.html">Messages</a></li>
+        <li><a href="teacher_profile.html">Profile</a></li>
+        
+        <button type="button" class="btn btn-outline-danger" onclick="window.location.href='../index.html'">Logout</button>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Calendar/</li>
+  </ol>
+</nav>
+  <div id="calendar">
+        <h1>My Calendar Schedule</h1>
+  <iframe src="https://calendar.google.com/calendar/embed?src=vuyisilemanalet24%40gmail.com&ctz=Africa%2FJohannesburg" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
+    </main>
+      </section>
+      
+      
+
+    <footer class="footer">
+      <p>&copy; 2025 LMS System. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle sidebar for mobile
+    document.getElementById("burger").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active_bar");
+    });
+     
+  </script>
+
+</body>
+</html>

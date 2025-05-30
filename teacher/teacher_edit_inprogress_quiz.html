@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set Quiz - LMS</title>
+  <!-- Bootstrap CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./assets/include/css/style.css"/>
+</head>
+<body class="bg-light">
+     <div class="lg_header">
+  <h1 class="lg_title">LMS Portal</h1>
+   </div>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Quiz</h2>
+
+    <form id="editQuizForm">
+      <!-- Quiz Info -->
+      <div class="mb-3">
+        <label for="quizTitle" class="form-label">Quiz Title</label>
+        <input type="text" class="form-control" id="quizTitle" value="Introduction to HTML" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="quizDescription" class="form-label">Quiz Description</label>
+        <textarea class="form-control" id="quizDescription" rows="3" required>This quiz tests the students' basic understanding of HTML tags, structure, and purpose.</textarea>
+      </div>
+
+      <!-- Questions Section -->
+      <div id="questionsContainer">
+        <!-- Question 1 -->
+        <div class="card mb-4 shadow-sm p-3 question-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">Question 1</h5>
+            <button type="button" class="btn btn-sm btn-danger" onclick="deleteQuestion(this)">Delete</button>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Question Text</label>
+            <input type="text" class="form-control" value="What does HTML stand for?" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <label>Option 1</label>
+              <input type="text" class="form-control" value="HyperText Markup Language" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 2</label>
+              <input type="text" class="form-control" value="HyperTool Multi Language" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 3</label>
+              <input type="text" class="form-control" value="HyperText Machine Learning" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 4</label>
+              <input type="text" class="form-control" value="Home Tool Markup Language" required>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label>Correct Option</label>
+            <select class="form-select" required>
+              <option value="1" selected>Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card mb-4 shadow-sm p-3 question-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">Question 2</h5>
+            <button type="button" class="btn btn-sm btn-danger" onclick="deleteQuestion(this)">Delete</button>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Question Text</label>
+            <input type="text" class="form-control" value="Which HTML tag is used to insert an image?" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <label>Option 1</label>
+              <input type="text" class="form-control" value="<pic>" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 2</label>
+              <input type="text" class="form-control" value="<image>" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 3</label>
+              <input type="text" class="form-control" value="<img>" required>
+            </div>
+            <div class="col-md-6 mb-2">
+              <label>Option 4</label>
+              <input type="text" class="form-control" value="<src>" required>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label>Correct Option</label>
+            <select class="form-select" required>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3" selected>Option 3</option>
+              <option value="4">Option 4</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Question Button -->
+      <div class="mb-4 text-end">
+        <button type="button" class="btn btn-primary" onclick="addQuestion()">+ Add Question</button>
+      </div>
+
+      <!-- Save Button -->
+      <div class="d-grid d-md-flex justify-content-md-between">
+        <a href="teacher_view_inprogress_quiz.html" class="btn btn-secondary" >Cancel</a>
+        <button type="submit" class="btn btn-success"nclick="window.location.href='teacher_view_inprogress_quiz.html'" >Update Quiz</button>
+      </div>
+    </form>
+    <br>
+    <br>
+  </div>
+
+  <!-- Bootstrap JS + JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function deleteQuestion(btn) {
+      const card = btn.closest('.question-card');
+      card.remove();
+    }
+
+    function addQuestion() {
+      const questionCount = document.querySelectorAll('.question-card').length + 1;
+      const questionHTML = `
+        <div class="card mb-4 shadow-sm p-3 question-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">Question ${questionCount}</h5>
+            <button type="button" class="btn btn-sm btn-danger" onclick="deleteQuestion(this)">Delete</button>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Question Text</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="row">
+            ${[1,2,3,4].map(i => `
+              <div class="col-md-6 mb-2">
+                <label>Option ${i}</label>
+                <input type="text" class="form-control" required>
+              </div>`).join('')}
+          </div>
+          <div class="mb-2">
+            <label>Correct Option</label>
+            <select class="form-select" required>
+              <option value="">Select correct answer</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+            </select>
+          </div>
+        </div>
+      `;
+      document.getElementById('questionsContainer').insertAdjacentHTML('beforeend', questionHTML);
+    }
+
+    document.getElementById('editQuizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert("Quiz updated successfully ");
+      window.location.href="teacher_view_inprogress_quiz.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>LMS Dashboard</title>
+  <link rel="stylesheet" href="./assets/include/css/style.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <h1>LMS Portal</h1>
+      <button class="burger" id="burger">&#9776;</button>
+      
+    </header>
+  
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav">
+        <li><a href="teacher-dashboard.html">Dashboard</a></li>
+        <li><a href="teacher_module_materials.html">Module Materials</a></li>
+        <li><a href="teacher_students.html">Students</a></li>
+        <li class="active"><a href="teacher_quiz.html">Quizes</a></li>
+        <li><a href="teacher_calendar.html">Calendar</a></li>
+        <li><a href="teacher_messages.html">Messages</a></li>
+        <li><a href="teacher_profile.html">Profile</a></li>
+        
+        <button type="button" class="btn btn-outline-danger" onclick="window.location.href='../index.html'">Logout</button>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb"> 
+    <li class="breadcrumb-item"><a href="teacher_quiz.html">Quizes</a></li>
+    <li class="breadcrumb-item"><a href="teacher_completed_quizes.html">Completed Quizes</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Quiz Submission</li>
+   
+    
+  </ol>
+</nav>
+      <h2>Quiz 7: Fundamentals Of Multimedia III</h2>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active " aria-current="page" href="teacher_quiz.html">Quiz Submissions</a>
+        </li>
+        
+        
+        
+      </ul>
+      
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<br>
+<br>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Student: Teekay Vuyisile Manale</div>
+      Student No. 202235376
+    </div>
+    <span class="badge text-bg-primary rounded-pill">Mark: 40%</span> 
+     <button type="button" class="btn btn-warning" onclick="window.location.href='teacher_view_student_quiz_results.html'">View</button>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Student: Mihle Makhala</div>
+     Student No. 542696594
+    </div>
+    <span class="badge text-bg-primary rounded-pill">Mark: 80%</span> 
+   <button type="button" class="btn btn-warning" onclick="window.location.href='teacher_view_student_quiz_results.html'">View</button>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Student: Robyn Tities</div>
+     Student No. 45484445
+    </div>
+     <span class="badge text-bg-primary rounded-pill">Mark: 81%</span> 
+    <button type="button" class="btn btn-warning" onclick="window.location.href='teacher_view_student_quiz_results.html'">View</button>
+  </li>
+   <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Student: Thulisile Mazwana</div>
+     Student No. 034516568
+    </div>
+    <span class="badge text-bg-primary rounded-pill">Mark: 90%</span> 
+    <button type="button" class="btn btn-warning" onclick="window.location.href='teacher_view_student_quiz_results.html'">View</button>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Student: Khanyiswa Zinyusile</div>
+     Student No. 21562076
+    </div>
+    <span class="badge text-bg-primary rounded-pill">Mark: 85%</span> 
+    <button type="button" class="btn btn-warning" onclick="window.location.href='teacher_view_student_quiz_results.html'">View</button>
+  </li>
+</ol>
+<br>
+<button class="btn btn-secondary" onclick="window.location.href='teacher_completed_quizes.html'">Back </button>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 LMS System. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle sidebar for mobile
+    document.getElementById("burger").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active_bar");
+    });
+  </script>
+</body>
+</html>

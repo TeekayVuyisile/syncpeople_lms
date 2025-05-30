@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>LMS Dashboard</title>
+  <link rel="stylesheet" href="./include/css/style.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <h1>LMS Portal</h1>
+      <button class="burger" id="burger">&#9776;</button>
+    </header>
+
+   <nav class="sidebar" id="sidebar">
+      <ul class="nav">
+        <li class="active"><a href="index.html">Dashboard</a></li>
+        <li><a href="Course.html">Courses</a></li>
+        <li><a href="assignments.html">Students Enrolled</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="message.html">Messages</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <button type="button" class="btn btn-outline-danger" onclick="window.location.href='login.html'">Logout</button>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Settings/</li>
+  </ol>
+</nav>
+      <h2>Settings</h2>
+      <section class="cards">
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='admin_modules.html'">View Course Modules</button>
+  </div>
+</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 LMS System. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle sidebar for mobile
+    document.getElementById("burger").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active_bar");
+    });
+  </script>
+</body>
+</html>

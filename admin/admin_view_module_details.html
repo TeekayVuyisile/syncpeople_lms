@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>LMS Dashboard</title>
+  <link rel="stylesheet" href="./include/css/style.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <h1>LMS Portal</h1>
+      <button class="burger" id="burger">&#9776;</button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav">
+         <li><a href="index.html" >Dashboard</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li class="active"><a href="message.html">Messages</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <button type="button" class="btn btn-outline-danger" onclick="window.location.href='login.html'">Logout</button>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb"> 
+    <li class="breadcrumb-item"><a href="Course.html">Course</a></li>
+    <li class="breadcrumb-item"><a href="Course.html">Modules</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Modules Details</li>
+   
+    
+  </ol>
+</nav>
+      <h2>Module Details </h2>
+      
+<br>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Module Name:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled placeholder="Multimedia">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Module Code:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled placeholder="CID10666">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Academic Period:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled placeholder="Semester One">
+  </div>
+    
+  
+<br>
+<button type="button" class="btn btn-secondary" onclick="window.location.href='admin_modules.html'">Back</button>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 LMS System. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle sidebar for mobile
+    document.getElementById("burger").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active_bar");
+    });
+  </script>
+</body>
+</html>
